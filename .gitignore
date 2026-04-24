@@ -1,0 +1,71 @@
+# ========================
+# Dependencies
+# ========================
+node_modules/
+**/node_modules/
+
+# ========================
+# Playwright artifacts
+# ========================
+ui-tests/test-results/
+ui-tests/playwright-report/
+ui-tests/blob-report/
+ui-tests/playwright/.cache/
+
+api-tests/test-results/
+api-tests/playwright-report/
+api-tests/blob-report/
+api-tests/playwright/.cache/
+
+# ========================
+# Locust / Python cache
+# ========================
+load-tests/__pycache__/
+load-tests/*.pyc
+load-tests/venv/
+load-tests/.venv/
+
+# ========================
+# Build outputs
+# ========================
+dist/
+build/
+
+# ========================
+# Logs
+# ========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# Environment files (IMPORTANT)
+# ========================
+.env
+.env.*
+*.env
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / Editors
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# Temporary files
+# ========================
+tmp/
+temp/
+
+# ========================
+# Test artifacts
+# ========================
+coverage/
+allure-results/
