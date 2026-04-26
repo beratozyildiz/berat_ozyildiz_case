@@ -1,4 +1,5 @@
 [![QA Pipeline](https://github.com/beratozyildiz/berat_ozyildiz_case/actions/workflows/ci.yml/badge.svg)](https://github.com/beratozyildiz/berat_ozyildiz_case/actions)
+
 [View UI Test Report](https://beratozyildiz.github.io/berat_ozyildiz_case/ui-report/)
 
 # QA Automation Assessment
