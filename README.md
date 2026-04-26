@@ -1,3 +1,5 @@
+![QA Pipeline](https://github.com/beratozyildiz/berat_ozyildiz_case/actions/workflows/ci.yml/badge.svg)
+
 # QA Automation Assessment
 
 Author: Berat Özyıldız
