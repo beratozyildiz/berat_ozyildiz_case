@@ -1,4 +1,5 @@
-![QA Pipeline](https://github.com/beratozyildiz/berat_ozyildiz_case/actions/workflows/ci.yml/badge.svg)
+[![QA Pipeline](https://github.com/beratozyildiz/berat_ozyildiz_case/actions/workflows/ci.yml/badge.svg)](https://github.com/beratozyildiz/berat_ozyildiz_case/actions)
+[View UI Test Report](https://beratozyildiz.github.io/berat_ozyildiz_case/ui-report/)
 
 # QA Automation Assessment
 
@@ -35,11 +36,11 @@ The focus is on:
 
 ## 📁 Project Structure
 
-qa-assessment/
-├── ui-tests/
-├── api-tests/
-├── load-tests/
-└── README.md
+qa-assessment/  
+├── ui-tests/  
+├── api-tests/  
+├── load-tests/  
+└── README.md  
 
 ---
 
@@ -82,7 +83,7 @@ Tests validate business intent instead of relying on exact UI text:
 ### ▶️ Run
 
 cd ui-tests  
-npx playwright test
+npx playwright test  
 
 ---
 
@@ -112,7 +113,7 @@ CRUD operations for /pet:
 ### ▶️ Run
 
 cd api-tests  
-npx playwright test
+npx playwright test  
 
 ---
 
@@ -145,10 +146,10 @@ This is expected behavior for production systems protected by WAF/CDN.
 
 ### 📊 Result Interpretation
 
-| Scenario     | Result              |
-|--------------|---------------------|
-| Health Check | Successful          |
-| n11 Search   | Blocked (403)       |
+| Scenario     | Result        |
+|--------------|---------------|
+| Health Check | Successful    |
+| n11 Search   | Blocked (403) |
 
 Requests are blocked before reaching backend services.
 
@@ -157,10 +158,10 @@ Requests are blocked before reaching backend services.
 ### ▶️ Run
 
 cd load-tests  
-python -m locust
+python -m locust  
 
 Open UI:  
-http://localhost:8089
+http://localhost:8089  
 
 ---
 
@@ -198,6 +199,52 @@ npx playwright test
 
 cd load-tests  
 python -m locust  
+
+---
+
+## ⚙️ CI / CD Pipeline
+
+A GitHub Actions pipeline is configured to automatically validate the project on every push and pull request.
+
+### 🔄 Pipeline Stages
+
+- UI Tests (Playwright)
+- API Tests (Playwright)
+- Load Tests (Locust)
+
+---
+
+### 🧪 Execution Details
+
+- UI and API tests run in isolated environments with dependency caching
+- Playwright browsers are installed during CI execution
+- Load tests run in headless mode for quick validation
+
+---
+
+### 📊 Reporting
+
+- UI test reports are automatically published via GitHub Pages:
+
+https://beratozyildiz.github.io/berat_ozyildiz_case/ui-report/
+
+- UI and API reports are also uploaded as CI artifacts for download
+
+---
+
+### ⚠️ Load Test Behavior
+
+- n11 load tests intentionally return `403 Forbidden`
+- This is expected due to bot protection (WAF/CDN)
+- The pipeline is configured to not fail on this scenario
+
+---
+
+### ✅ Outcome
+
+- Every change is automatically tested
+- Failures are visible immediately
+- Reports are accessible without running tests locally
 
 ---
 
