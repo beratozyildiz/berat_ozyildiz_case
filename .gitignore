@@ -2,28 +2,24 @@
 # Dependencies
 # ========================
 node_modules/
-**/node_modules/
 
 # ========================
 # Playwright artifacts
 # ========================
-ui-tests/test-results/
-ui-tests/playwright-report/
-ui-tests/blob-report/
-ui-tests/playwright/.cache/
-
-api-tests/test-results/
-api-tests/playwright-report/
-api-tests/blob-report/
-api-tests/playwright/.cache/
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+**/trace.zip
+**/*.webm
 
 # ========================
-# Locust / Python cache
+# Python / Locust
 # ========================
-load-tests/__pycache__/
-load-tests/*.pyc
-load-tests/venv/
-load-tests/.venv/
+__pycache__/
+*.pyc
+venv/
+.venv/
 
 # ========================
 # Build outputs
@@ -40,7 +36,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # ========================
-# Environment files (IMPORTANT)
+# Environment files
 # ========================
 .env
 .env.*
@@ -59,7 +55,7 @@ Thumbs.db
 .idea/
 
 # ========================
-# Temporary files
+# Temp files
 # ========================
 tmp/
 temp/
